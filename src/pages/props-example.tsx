@@ -1,5 +1,5 @@
+import ExampleProps from '@/components/ExampleProps';
 import { env } from '@/env';
-import Link from 'next/link';
 
 export default function PropsExample(props: {
   title: string;
@@ -7,16 +7,10 @@ export default function PropsExample(props: {
 }) {
   return (
     <div>
-      <h1>{props.title}</h1>
-      <Link href="/">Home</Link>
-      <p>{props.somethingShared}</p>
-      <button
-        onClick={() => {
-          alert(props.title);
-        }}
-      >
-        Alert title
-      </button>
+      <ExampleProps
+        title={props.title}
+        somethingShared={props.somethingShared}
+      />
     </div>
   );
 }

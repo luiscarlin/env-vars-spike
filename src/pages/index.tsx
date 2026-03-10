@@ -11,11 +11,6 @@ export default function Index() {
           </Link>
         </li>
         <li>
-          <Link href="/window-example">
-            Env vars passed from server to client via window.__ENV__
-          </Link>
-        </li>
-        <li>
           <Link href="/env-context-example">
             Env vars passed from server to client via context
           </Link>

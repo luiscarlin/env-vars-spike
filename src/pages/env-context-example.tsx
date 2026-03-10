@@ -1,4 +1,4 @@
-import Example from '@/components/Example';
+import ExampleContext from '@/components/ExampleContext';
 import {
   loadPublicEnvServerSide,
   PublicEnvProvider,
@@ -11,7 +11,7 @@ export default function EnvContextExample({
 }) {
   return (
     <PublicEnvProvider publicEnv={publicEnv}>
-      <Example />
+      <ExampleContext />
     </PublicEnvProvider>
   );
 }

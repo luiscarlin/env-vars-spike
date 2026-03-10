@@ -1,7 +1,7 @@
 import { usePublicEnv } from '@/providers/PublicEnvContext';
 import Link from 'next/link';
 
-export default function Example() {
+export default function ExampleContext() {
   const publicEnv = usePublicEnv();
 
   return (

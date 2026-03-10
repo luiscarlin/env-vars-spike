@@ -1,7 +1,5 @@
-import { env } from '@/env';
+import { env, PUBLIC_ENV_KEYS } from '@/env';
 import { Html, Head, Main, NextScript } from 'next/document';
-
-const PUBLIC_ENV_KEYS = ['APP_ENV'] as const;
 
 export default function Document() {
   const publicEnv = Object.fromEntries(

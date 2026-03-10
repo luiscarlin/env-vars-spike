@@ -2,19 +2,19 @@ import { useGetPublicEnv } from '@/hooks/useGetPublicEnv';
 import Link from 'next/link';
 
 export default function WindowExample() {
-  const { APP_ENV } = useGetPublicEnv();
+  const publicEnv = useGetPublicEnv();
 
   return (
     <div>
       <h1>Window Example</h1>
       <Link href="/">Home</Link>
-      <p>APP_ENV: {APP_ENV}</p>
+      <p>APP_ENV: {publicEnv?.APP_ENV}</p>
       <button
         onClick={() => {
-          alert(APP_ENV);
+          alert(publicEnv?.TITLE ?? '');
         }}
       >
-        Alert public env
+        Alert TITLE
       </button>
     </div>
   );

@@ -9,12 +9,13 @@ export default function Example() {
       <h1>Example</h1>
       <Link href="/">Home</Link>
       <p>APP_ENV: {publicEnv.APP_ENV}</p>
+      <p>TITLE: {publicEnv.TITLE}</p>
       <button
         onClick={() => {
-          alert(publicEnv.APP_ENV);
+          alert(publicEnv.TITLE);
         }}
       >
-        Alert public env
+        Alert TITLE
       </button>
     </div>
   );

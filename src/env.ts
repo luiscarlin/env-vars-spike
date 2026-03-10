@@ -14,4 +14,4 @@ export const env = createEnv({
   },
 });
 
-export const PUBLIC_ENV_KEYS = ['APP_ENV'] as const;
+export const PUBLIC_ENV_KEYS: (keyof typeof env)[] = ['APP_ENV', 'TITLE'];

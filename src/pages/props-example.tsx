@@ -4,7 +4,6 @@ import Link from 'next/link';
 export default function PropsExample(props: {
   title: string;
   somethingShared: string;
-  appEnv: string;
 }) {
   return (
     <div>
@@ -13,10 +12,10 @@ export default function PropsExample(props: {
       <p>{props.somethingShared}</p>
       <button
         onClick={() => {
-          alert(props.appEnv);
+          alert(props.title);
         }}
       >
-        Alert public env
+        Alert title
       </button>
     </div>
   );
@@ -27,7 +26,6 @@ export function getServerSideProps() {
     props: {
       title: env.TITLE,
       somethingShared: env.SOMETHING_SHARED,
-      appEnv: env.APP_ENV,
     },
   };
 }

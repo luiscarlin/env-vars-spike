@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "APP_ENV=dev RUN_ENV=local next dev",
+    "dev:uat": "APP_ENV=uat RUN_ENV=local next dev",
+    "dev:prod": "APP_ENV=prod RUN_ENV=local next dev",
+    "build:dev": "APP_ENV=dev next build",
+    "build:uat": "APP_ENV=uat next build",
+    "build:prod": "APP_ENV=prod next build",
+    "start:dev": "APP_ENV=dev next start",
+    "start:uat": "APP_ENV=uat next start",
+    "start:prod": "APP_ENV=prod next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.54.1",
+    "@t3-oss/env-nextjs": "^0.13.10",
     "next": "16.1.6",
+    "prettier": "^3.8.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

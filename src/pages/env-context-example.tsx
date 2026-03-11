@@ -1,4 +1,5 @@
 import ExampleContext from '@/components/ExampleContext';
+import { env } from '@/env';
 import {
   loadPublicEnvServerSide,
   PublicEnvProvider,
@@ -17,6 +18,7 @@ export default function EnvContextExample({
 }
 
 export function getServerSideProps() {
+  console.log('SECRET_KEY', env.SECRET_KEY);
   return {
     props: {
       publicEnv: loadPublicEnvServerSide(),

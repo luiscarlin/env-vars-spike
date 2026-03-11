@@ -5,11 +5,13 @@ export const env = createEnv({
   server: {
     APP_ENV: z.enum(['dev', 'uat', 'prod']),
     SOMETHING_SHARED: z.string().min(1),
+    SECRET_KEY: z.string().min(1),
     TITLE: z.string().min(1),
   },
   runtimeEnv: {
     APP_ENV: process.env.APP_ENV,
     SOMETHING_SHARED: process.env.SOMETHING_SHARED,
+    SECRET_KEY: process.env.SECRET_KEY,
     TITLE: process.env.TITLE,
   },
 });
